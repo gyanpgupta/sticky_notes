@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<ul>
+  <% @notes.each do |note| %>
+    <li >
+      <a href="<%= note_path(note.id) %>" style="background-color: <%= note.color%>" >
+        Text: <span><%= note.title %></span></br>
+        Author: <span><%= note.name %></span></br>
+        Image: <span><%= image_tag note.avatar.thumb.url if note.avatar? %></span></br>
+        CreatedAt: <span><%= note.created_at.strftime("%d/%m/%Y")%>
+      </a>
+    </li>
+  <% end %>
+<ul>
+
+<%= link_to 'New Note', new_note_path %>
+

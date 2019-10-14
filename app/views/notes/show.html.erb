@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %>
+
+<ul>
+	<li >
+		<a href="#" >
+			<span>Title:</span>
+			<%= @note.title %>
+
+			<span>Name:</span>
+			<%= @note.name %>
+
+			<span>Color:</span>
+			<%= @note.color %>
+			
+			<span>Avatar:</span>
+			<%= image_tag(@note.avatar.thumb.url, alt: 'Image') if @note.avatar? %>
+		</a>
+	</li>
+<ul>
+
+
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>
