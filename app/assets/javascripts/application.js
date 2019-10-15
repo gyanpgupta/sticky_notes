@@ -20,9 +20,8 @@
 //= require jquery.minicolors
 
 $(document).ready(function(){
-  $('#color').minicolors()	  
+  $('#color').minicolors()
 	$('#note_title, #note_name').on('keyup',function(e){
 		$('.'+ $(this).attr('id')).text($(this).val())
 	})
 })
-

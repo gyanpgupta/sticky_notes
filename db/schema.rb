@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_10_14_100704) do
   create_table "notes", force: :cascade do |t|
     t.text "title"
     t.string "name"
+    t.string "email"
     t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
